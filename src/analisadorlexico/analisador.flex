@@ -21,21 +21,8 @@ CARACTERE=[^\"]
 
 %%
        
-"program"                       { imprimir("Palavra reservada program", yytext()); }
-"declare"                       { imprimir("Palavra reservada declare", yytext()); }
-"begin"                         { imprimir("Palavra reservada begin", yytext()); }
-"end"                           { imprimir("Palavra reservada end", yytext()); }
-"integer"                       { imprimir("Palavra reservada integer", yytext()); }
-"if"                            { imprimir("Palavra reservada if", yytext()); }
-"then"                          { imprimir("Palavra reservada then", yytext()); }
-"else"                          { imprimir("Palavra reservada else", yytext()); }
-"do"                            { imprimir("Palavra reservada do", yytext()); }
-"while"                         { imprimir("Palavra reservada while", yytext()); }
-"read"                          { imprimir("Palavra reservada read", yytext()); }
-"write"                         { imprimir("Palavra reservada write", yytext()); }
-"("                             { imprimir("Palavra reservada (", yytext()); }
-")"                             { imprimir("Palavra reservada )", yytext()); }
-
+"program"|"declare"|"begin"|"end"|"integer"|"if"|"then"|"else"|"do"|"while"|"read"|"write"|"("|")" { imprimir("Palavra reservada", yytext()); }
+                  
 {BRANCO}                        { imprimir("Espaco em branco", yytext()); }
 {RELOP}                         { imprimir("Comparacao", yytext()); }
 {ADDOP}                         { imprimir("Adicao ou Subtracao", yytext()); }
