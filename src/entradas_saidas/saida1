@@ -1,0 +1,137 @@
+run:
+program - Palavra reservada
+  - Espaco em branco
+T - Letra
+e - Letra
+s - Letra
+t - Letra
+e - Letra
+1 - Dígito
+
+ - Espaco em branco
+declare - Palavra reservada
+
+ - Espaco em branco
+integer - Palavra reservada
+  - Espaco em branco
+a - Letra
+, - Caractere
+  - Espaco em branco
+b - Letra
+, - Caractere
+  - Espaco em branco
+c - Letra
+; - Caractere
+
+ - Espaco em branco
+integer - Palavra reservada
+  - Espaco em branco
+r - Letra
+e - Letra
+s - Letra
+u - Letra
+l - Letra
+t - Letra
+; - Caractere
+
+ - Espaco em branco
+begin - Palavra reservada
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+read - Palavra reservada
+  - Espaco em branco
+( - Palavra reservada
+a - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+read - Palavra reservada
+  - Espaco em branco
+( - Palavra reservada
+c - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+b - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+1 - Dígito
+0 - Dígito
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+r - Letra
+e - Letra
+s - Letra
+u - Letra
+l - Letra
+t - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+( - Palavra reservada
+a - Letra
+  - Espaco em branco
+* - Multiplicacao ou Divisao
+  - Espaco em branco
+c - Letra
+) - Palavra reservada
+/ - Multiplicacao ou Divisao
+( - Palavra reservada
+b - Letra
+  - Espaco em branco
++ - Adicao ou Subtracao
+  - Espaco em branco
+5 - Dígito
+  - Espaco em branco
+- - Adicao ou Subtracao
+  - Espaco em branco
+3 - Dígito
+4 - Dígito
+5 - Dígito
+) - Palavra reservada
+  - Espaco em branco
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+( - Palavra reservada
+r - Letra
+e - Letra
+s - Letra
+u - Letra
+l - Letra
+t - Letra
+) - Palavra reservada
+
+ - Espaco em branco
+end - Palavra reservada
+
+ - Espaco em branco
+CONSTRUÍDO COM SUCESSO (tempo total: 0 segundos)
+

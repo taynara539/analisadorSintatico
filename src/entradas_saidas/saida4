@@ -1,0 +1,203 @@
+run:
+program - Palavra reservada
+  - Espaco em branco
+t - Letra
+e - Letra
+s - Letra
+t - Letra
+e - Letra
+4 - Dígito
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+declare - Palavra reservada
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+integer - Palavra reservada
+  - Espaco em branco
+i - Letra
+, - Caractere
+  - Espaco em branco
+j - Letra
+, - Caractere
+  - Espaco em branco
+k - Letra
+, - Caractere
+  - Espaco em branco
+_ - Caractere
+v - Letra
+a - Letra
+r - Letra
+1 - Dígito
+; - Caractere
+
+ - Espaco em branco
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+begin - Palavra reservada
+
+ - Espaco em branco
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+i - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+4 - Dígito
+  - Espaco em branco
+* - Multiplicacao ou Divisao
+  - Espaco em branco
+( - Palavra reservada
+5 - Dígito
+- - Adicao ou Subtracao
+3 - Dígito
+) - Palavra reservada
+  - Espaco em branco
+* - Multiplicacao ou Divisao
+  - Espaco em branco
+- - Adicao ou Subtracao
+5 - Dígito
+0 - Dígito
+  - Espaco em branco
+/ - Multiplicacao ou Divisao
+  - Espaco em branco
+1 - Dígito
+0 - Dígito
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+j - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+i - Letra
+  - Espaco em branco
+* - Multiplicacao ou Divisao
+  - Espaco em branco
+1 - Dígito
+0 - Dígito
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+k - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+i - Letra
+* - Multiplicacao ou Divisao
+  - Espaco em branco
+j - Letra
+  - Espaco em branco
+/ - Multiplicacao ou Divisao
+  - Espaco em branco
+k - Letra
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+k - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+- - Adicao ou Subtracao
+4 - Dígito
+  - Espaco em branco
++ - Adicao ou Subtracao
+  - Espaco em branco
+3 - Dígito
+  - Espaco em branco
+$ - Caractere
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+( - Palavra reservada
+i - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+( - Palavra reservada
+j - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+( - Palavra reservada
+k - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+end - Palavra reservada
+CONSTRUÍDO COM SUCESSO (tempo total: 0 segundos)

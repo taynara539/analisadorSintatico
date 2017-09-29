@@ -1,0 +1,336 @@
+run:
+program - Palavra reservada
+  - Espaco em branco
+t - Letra
+e - Letra
+s - Letra
+t - Letra
+e - Letra
+3 - Dígito
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+declare - Palavra reservada
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+integer - Palavra reservada
+  - Espaco em branco
+i - Letra
+d - Letra
+, - Caractere
+  - Espaco em branco
+q - Letra
+t - Letra
+d - Letra
+, - Caractere
+  - Espaco em branco
+c - Letra
+o - Letra
+n - Letra
+t - Letra
+, - Caractere
+  - Espaco em branco
+s - Letra
+o - Letra
+m - Letra
+a - Letra
+; - Caractere
+
+ - Espaco em branco
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+begin - Palavra reservada
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+q - Letra
+t - Letra
+d - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+5 - Dígito
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+c - Letra
+o - Letra
+n - Letra
+t - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+5 - Dígito
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+s - Letra
+o - Letra
+m - Letra
+a - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+0 - Dígito
+; - Caractere
+
+ - Espaco em branco
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+do - Palavra reservada
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+( - Palavra reservada
+"Idade: " - Literal
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+read - Palavra reservada
+  - Espaco em branco
+( - Palavra reservada
+i - Letra
+d - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+s - Letra
+o - Letra
+m - Letra
+a - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+s - Letra
+o - Letra
+m - Letra
+a - Letra
+  - Espaco em branco
+# - Caractere
+  - Espaco em branco
+i - Letra
+d - Letra
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+c - Letra
+o - Letra
+n - Letra
+t - Letra
+  - Espaco em branco
+: - Caractere
+= - Comparacao
+  - Espaco em branco
+c - Letra
+o - Letra
+n - Letra
+t - Letra
+  - Espaco em branco
+- - Adicao ou Subtracao
+  - Espaco em branco
+1 - Dígito
+; - Caractere
+
+ - Espaco em branco
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+while - Palavra reservada
+( - Palavra reservada
+c - Letra
+o - Letra
+n - Letra
+t - Letra
+  - Espaco em branco
+> - Comparacao
+  - Espaco em branco
+0 - Dígito
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+( - Palavra reservada
+"Media: " - Literal
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+  - Espaco em branco
+write - Palavra reservada
+  - Espaco em branco
+( - Palavra reservada
+s - Letra
+o - Letra
+m - Letra
+a - Letra
+  - Espaco em branco
+/ - Multiplicacao ou Divisao
+  - Espaco em branco
+q - Letra
+t - Letra
+d - Letra
+) - Palavra reservada
+; - Caractere
+
+ - Espaco em branco
+end - Palavra reservada
+CONSTRUÍDO COM SUCESSO (tempo total: 1 segundo)
