@@ -1,13 +1,40 @@
-package analisadorlexico;
+package analisadorSintatoco;
 
-terminal PROGRAMA, DECLARE, BEGIN, END, P_VIRG, VIRG, INTEGER; 
+terminal PRG, DCL, BGN, END, P_VIRG, VIRG, INTEGER; 
 terminal String IDENTIFIER;
 
 nonterminal program, body, decl_list, decl, ident_list, tipo; 
 
-program ::= PRG IDENTIFIER body;
-body ::= DCL decl_list BGN END;
-decl_list ::= decl | decl P_VIRG decl_list;
-decl ::= tipo ident_list;
-ident_list ::= IDENTIFIER | IDENTIFIER VIRG ident_list;
-tipo ::= INTEGER;
+program ::= program identifier body
+body ::= declare decl-list begin stmt-list end | begin stmt-list end
+decl-list ::= decl | decl ; decl-list
+decl ::= type ident-list
+ident-list ::= identifier | identifier , ident-list
+type ::= integer
+stmt-list ::= stmt | stmt ; stmt-list
+stmt ::= assign-stmt | if-stmt | while-stmt | read-stmt | write-stmt
+assign-stmt ::= variable ":=" simple_expr
+if-stmt ::= if condition then stmt-list end| if condition then stmt-list else stmt-list end
+condition ::= expression
+while-stmt ::= do stmt-list stmt-suffix
+stmt-suffix ::= while condition
+read-stmt ::= read ( identifier )
+write-stmt ::= write ( writable )
+writable ::= simple-expr | literal
+expression ::= simple-expr | simple-expr relop simple-expr
+simple-expr ::= term | simple-expr addop term
+term ::= factor | term mulop factor
+factor ::= variable | constant | ( expression )
+relop ::= = | > | >= | < | <= | <>
+addop ::= + | -
+mulop ::= * | /
+constant ::= digit | digit constant
+literal ::= " {caractere}* "
+identifier ::= letter {letter | digit}*
+letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L"
+| "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W"
+| "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h"
+| "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
+| "u" | "v" | "w" | "x" | "y" | "z"
+digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+caractere ::= um dos 256 caracteres do conjunto ASCII, exceto ”
