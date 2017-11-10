@@ -9,7 +9,7 @@ public class TabelaSimbolo {
         tabelaSimbolos = new Hashtable<String, Token>();
         String palavra;
         palavra = "program";
-        
+        tabelaSimbolos.put(palavra.toString(), (new Token(sym.PRG, palavra.toString())));
     }
 
     public Hashtable<String, Token> getTabelaSimbolos() {

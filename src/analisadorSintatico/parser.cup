@@ -1,33 +1,32 @@
-package analisadorSintatoco;
+package analisadorSintatico;
 
-terminal PRG, DCL, BGN, END, P_VIRG, VIRG, INTEGER; 
-reservado? ELSE, DO, WHILE, READ, WRITE, THEN, IF;
-        
+terminal PRG, DCL, BGN, END, P_VIRG, VIRG, INTEGER, ELSE, DO, WHILE;
+terminal READ, THEN, IF, WRITE, RELOP, ADDOP, ABREPARENTESE, FECHAPARENTESE, MULOP, A_CHAVE, F_CHAVE; 
     
-terminal String IDENTIFIER;
+terminal String identifier;
 
-nonterminal program, body, decl_list, decl, ident_list, type, stmt-list, stmt, assign-stmt, condition; 
-nonterminal while-stmt, stmt-suffix, read-stmt, write-stmt, writetable, expression, simple-expr, term, factor, constant;
+nonterminal program, body, decl_list, decl, ident_list, type, stmt_list, stmt, assign_stmt, variable;
+nonterminal ATRIBUICAO, condition, if_stmt, literal, while_stmt, stmt_suffix, read_stmt, write_stmt, writable;
+nonterminal expression, simple_expr, term, factor, DIGITO, letter, constant;
 
-program ::= program identifier body
-body ::= declare decl-list begin stmt-list end | begin stmt-list end
-decl-list ::= decl | decl ; decl-list
-decl ::= type ident-list
-ident-list ::= identifier | identifier , ident-list
-type ::= integer
-stmt-list ::= stmt | stmt ; stmt-list
-stmt ::= assign-stmt | if-stmt | while-stmt | read-stmt | write-stmt
-assign-stmt ::= variable ":=" simple_expr
-if-stmt ::= if condition then stmt-list end| if condition then stmt-list else stmt-list end
-condition ::= expression
-while-stmt ::= do stmt-list stmt-suffix
-stmt-suffix ::= while condition
-read-stmt ::= read ( identifier )
-write-stmt ::= write ( writable )
-writable ::= simple-expr | literal
-expression ::= simple-expr | simple-expr relop simple-expr
-simple-expr ::= term | simple-expr addop term
-term ::= factor | term mulop factor
-factor ::= variable | constant | ( expression )
-constant ::= digit | digit constant
-identifier ::= letter {letter | digit}*
+program ::= PRG identifier body;
+body ::= DCL decl_list BGN stmt_list END | BGN stmt_list END;
+decl_list ::= DCL | DCL P_VIRG decl_list;
+decl ::= type ident_list;
+ident_list ::= identifier | identifier VIRG ident_list;
+type ::= INTEGER;
+stmt_list ::= stmt | stmt P_VIRG stmt_list;
+stmt ::= assign_stmt | if_stmt | while_stmt | read_stmt | write_stmt;
+assign_stmt ::= variable ATRIBUICAO  simple_expr;
+if_stmt ::= IF condition THEN stmt_list END| IF condition THEN stmt_list ELSE stmt_list END;
+condition ::= expression;
+while_stmt ::= DO stmt_list stmt_suffix;
+stmt_suffix ::= WHILE condition;
+read_stmt ::= READ ABREPARENTESE identifier FECHAPARENTESE;
+write_stmt ::= WRITE ABREPARENTESE writable FECHAPARENTESE;
+writable ::= simple_expr | literal;
+expression ::= simple_expr | simple_expr RELOP simple_expr;
+simple_expr ::= term | simple_expr ADDOP term;
+term ::= factor | term MULOP factor;
+factor ::= variable | constant | ABREPARENTESE expression FECHAPARENTESE;
+constant ::= DIGITO | DIGITO constant;

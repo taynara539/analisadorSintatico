@@ -55,18 +55,18 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\3\2\17\1\1\3\1\4\1\5\1\6"+
-    "\1\7\1\10\1\11\10\0\1\12\5\0\1\13\24\0"+
-    "\1\14\23\0\1\15\4\0\1\16\6\0\1\17\1\0"+
+    "\1\0\1\1\3\2\20\1\1\3\1\4\1\5\1\6"+
+    "\1\7\1\10\1\11\10\0\1\12\5\0\1\13\25\0"+
+    "\1\14\24\0\1\15\4\0\1\16\7\0\1\17\1\0"+
     "\1\20\1\21\1\22\1\23\3\0\1\24\1\25\1\0"+
-    "\1\26\17\0\1\27\2\0\1\30\7\0\1\31\21\0"+
-    "\1\32\4\0\1\33\1\34\1\35\13\0\1\36\10\0"+
-    "\1\37\1\0\1\40\2\0\1\41\1\42\1\43\3\0"+
-    "\1\44\1\0\1\45\4\0\1\46\1\47\1\50\2\0"+
-    "\1\51\1\52\1\53\1\54\1\55";
+    "\1\26\20\0\1\27\2\0\1\30\7\0\1\31\22\0"+
+    "\1\32\4\0\1\33\1\34\1\35\1\36\13\0\1\37"+
+    "\10\0\1\40\1\0\1\41\2\0\1\42\1\43\1\44"+
+    "\3\0\1\45\1\0\1\46\4\0\1\47\1\50\1\51"+
+    "\2\0\1\52\1\53\1\54\1\55\1\56";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[207];
+    int [] result = new int[214];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -93,33 +93,34 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final String ZZ_ROWMAP_PACKED_0 =
     "\0\0\0\53\0\126\0\201\0\53\0\254\0\327\0\u0102"+
     "\0\u012d\0\u0158\0\u0183\0\u01ae\0\u01d9\0\u0204\0\u022f\0\u025a"+
-    "\0\u0285\0\u02b0\0\u02db\0\u0306\0\53\0\53\0\53\0\53"+
-    "\0\53\0\53\0\53\0\u0331\0\u035c\0\u0387\0\u03b2\0\u03dd"+
-    "\0\u0408\0\u0433\0\u045e\0\53\0\u0489\0\u04b4\0\u04df\0\u050a"+
+    "\0\u0285\0\u02b0\0\u02db\0\u0306\0\u0331\0\53\0\53\0\53"+
+    "\0\53\0\53\0\53\0\53\0\u035c\0\u0387\0\u03b2\0\u03dd"+
+    "\0\u0408\0\u0433\0\u045e\0\u0489\0\53\0\u04b4\0\u04df\0\u050a"+
     "\0\u0535\0\u0560\0\u058b\0\u05b6\0\u05e1\0\u060c\0\u0637\0\u0662"+
     "\0\u068d\0\u06b8\0\u06e3\0\u070e\0\u0739\0\u0764\0\u078f\0\u07ba"+
-    "\0\u07e5\0\u0810\0\u083b\0\u0866\0\u0891\0\u08bc\0\53\0\u08e7"+
-    "\0\u0912\0\u093d\0\u0968\0\u0993\0\u09be\0\u09e9\0\u0a14\0\u0a3f"+
+    "\0\u07e5\0\u0810\0\u083b\0\u0866\0\u0891\0\u08bc\0\u08e7\0\u0912"+
+    "\0\53\0\u093d\0\u0968\0\u0993\0\u09be\0\u09e9\0\u0a14\0\u0a3f"+
     "\0\u0a6a\0\u0a95\0\u0ac0\0\u0aeb\0\u0b16\0\u0b41\0\u0b6c\0\u0b97"+
-    "\0\u0bc2\0\u0bed\0\53\0\u0c18\0\u0c43\0\u0c6e\0\u0c99\0\53"+
-    "\0\u0cc4\0\u0cef\0\u0d1a\0\u0d45\0\u0d70\0\u0d9b\0\u0dc6\0\u0df1"+
-    "\0\u0e1c\0\53\0\53\0\53\0\u0e47\0\u0e72\0\u0e9d\0\53"+
-    "\0\53\0\u0ec8\0\53\0\u0ef3\0\u0f1e\0\u0f49\0\u0f74\0\u0f9f"+
+    "\0\u0bc2\0\u0bed\0\u0c18\0\u0c43\0\u0c6e\0\53\0\u0c99\0\u0cc4"+
+    "\0\u0cef\0\u0d1a\0\53\0\u0d45\0\u0d70\0\u0d9b\0\u0dc6\0\u0df1"+
+    "\0\u0e1c\0\u0e47\0\u0e72\0\u0e9d\0\u0ec8\0\53\0\53\0\53"+
+    "\0\u0ef3\0\u0f1e\0\u0f49\0\53\0\53\0\u0f74\0\53\0\u0f9f"+
     "\0\u0fca\0\u0ff5\0\u1020\0\u104b\0\u1076\0\u10a1\0\u10cc\0\u10f7"+
-    "\0\u1122\0\u114d\0\53\0\u1178\0\u11a3\0\u11ce\0\u11f9\0\u1224"+
-    "\0\u124f\0\u127a\0\u12a5\0\u12d0\0\u12fb\0\53\0\u1326\0\u1351"+
-    "\0\u137c\0\u13a7\0\u13d2\0\u13fd\0\u1428\0\u1453\0\u147e\0\u14a9"+
-    "\0\u14d4\0\u14ff\0\u152a\0\u1555\0\u1580\0\u15ab\0\u15d6\0\53"+
-    "\0\u1601\0\u162c\0\u1657\0\u1682\0\53\0\53\0\53\0\u16ad"+
-    "\0\u16d8\0\u1703\0\u172e\0\u1759\0\u1784\0\u17af\0\u17da\0\u1805"+
-    "\0\u1830\0\u185b\0\53\0\u1886\0\u18b1\0\u18dc\0\u1907\0\u1932"+
-    "\0\u195d\0\u1988\0\u19b3\0\53\0\u19de\0\53\0\u1a09\0\u1a34"+
-    "\0\53\0\53\0\53\0\u1a5f\0\u1a8a\0\u1ab5\0\53\0\u1ae0"+
-    "\0\53\0\u1b0b\0\u1b36\0\u1b61\0\u1b8c\0\53\0\53\0\53"+
-    "\0\u1bb7\0\u1be2\0\53\0\53\0\53\0\53\0\53";
+    "\0\u1122\0\u114d\0\u1178\0\u11a3\0\u11ce\0\u11f9\0\u1224\0\53"+
+    "\0\u124f\0\u127a\0\u12a5\0\u12d0\0\u12fb\0\u1326\0\u1351\0\u137c"+
+    "\0\u13a7\0\u13d2\0\53\0\u13fd\0\u1428\0\u1453\0\u147e\0\u14a9"+
+    "\0\u14d4\0\u14ff\0\u152a\0\u1555\0\u1580\0\u15ab\0\u15d6\0\u1601"+
+    "\0\u162c\0\u1657\0\u1682\0\u16ad\0\u16d8\0\53\0\u1703\0\u172e"+
+    "\0\u1759\0\u1784\0\53\0\53\0\53\0\53\0\u17af\0\u17da"+
+    "\0\u1805\0\u1830\0\u185b\0\u1886\0\u18b1\0\u18dc\0\u1907\0\u1932"+
+    "\0\u195d\0\53\0\u1988\0\u19b3\0\u19de\0\u1a09\0\u1a34\0\u1a5f"+
+    "\0\u1a8a\0\u1ab5\0\53\0\u1ae0\0\53\0\u1b0b\0\u1b36\0\53"+
+    "\0\53\0\53\0\u1b61\0\u1b8c\0\u1bb7\0\53\0\u1be2\0\53"+
+    "\0\u1c0d\0\u1c38\0\u1c63\0\u1c8e\0\53\0\53\0\53\0\u1cb9"+
+    "\0\u1ce4\0\53\0\53\0\53\0\53\0\53";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[207];
+    int [] result = new int[214];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -144,57 +145,59 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\2\2\1\7\3\2"+
     "\1\10\1\11\1\12\1\13\1\14\1\15\2\2\1\16"+
-    "\4\2\1\17\1\20\1\21\1\22\1\2\1\23\1\24"+
-    "\2\2\1\25\2\2\1\26\1\27\1\30\1\31\1\32"+
-    "\1\33\55\0\1\3\54\0\1\5\54\0\1\34\57\0"+
-    "\1\35\72\0\1\36\37\0\1\37\7\0\1\40\36\0"+
-    "\1\41\13\0\1\42\42\0\1\43\7\0\1\44\47\0"+
-    "\1\45\1\0\1\46\10\0\1\47\26\0\1\50\55\0"+
-    "\1\51\1\0\1\52\5\0\1\53\55\0\1\54\40\0"+
-    "\1\55\56\0\1\56\7\0\1\57\36\0\1\60\2\0"+
-    "\1\61\15\0\1\62\25\0\1\63\61\0\1\64\6\0"+
-    "\1\65\26\0\1\66\53\0\1\67\76\0\1\70\41\0"+
-    "\1\71\47\0\1\72\65\0\1\73\47\0\1\74\41\0"+
-    "\1\75\67\0\1\76\36\0\1\77\64\0\1\100\37\0"+
-    "\1\101\54\0\1\102\75\0\1\103\43\0\1\104\46\0"+
-    "\1\105\36\0\1\106\64\0\1\107\52\0\1\110\56\0"+
-    "\1\111\40\0\1\112\63\0\1\113\53\0\1\114\44\0"+
-    "\1\115\52\0\1\116\37\0\1\117\52\0\1\120\65\0"+
-    "\1\121\52\0\1\122\67\0\1\123\25\0\1\124\55\0"+
-    "\1\125\13\0\1\126\44\0\1\127\45\0\1\130\64\0"+
-    "\1\131\54\0\1\132\45\0\1\133\56\0\1\134\37\0"+
-    "\1\135\54\0\1\136\47\0\1\137\64\0\1\140\55\0"+
-    "\1\141\44\0\1\142\53\0\1\143\43\0\1\144\56\0"+
-    "\1\145\53\0\1\146\61\0\1\147\30\0\1\150\52\0"+
-    "\1\151\62\0\1\152\57\0\1\153\41\0\1\154\60\0"+
-    "\1\155\62\0\1\156\32\0\1\157\26\0\1\160\27\0"+
-    "\1\161\62\0\1\162\56\0\1\163\52\0\1\164\40\0"+
-    "\1\165\62\0\1\166\63\0\1\167\34\0\1\170\70\0"+
-    "\1\171\23\0\1\172\56\0\1\173\22\0\1\174\23\0"+
-    "\1\175\3\0\1\176\61\0\1\177\57\0\1\200\52\0"+
-    "\1\201\32\0\1\202\70\0\1\203\45\0\1\204\60\0"+
-    "\1\205\51\0\1\206\44\0\1\207\16\0\1\210\35\0"+
-    "\1\211\44\0\1\212\46\0\1\213\71\0\1\214\37\0"+
-    "\1\215\57\0\1\216\5\0\1\217\34\0\1\220\101\0"+
-    "\1\221\23\0\1\222\100\0\1\223\52\0\1\224\27\0"+
-    "\1\225\56\0\1\226\55\0\1\227\43\0\1\230\56\0"+
-    "\1\231\61\0\1\232\40\0\1\233\56\0\1\234\61\0"+
-    "\1\235\50\0\1\236\46\0\1\237\60\0\1\240\61\0"+
-    "\1\241\33\0\1\242\63\0\1\243\42\0\1\244\60\0"+
-    "\1\245\44\0\1\246\60\0\1\247\52\0\1\250\51\0"+
-    "\1\251\50\0\1\252\56\0\1\253\51\0\1\254\43\0"+
-    "\1\255\52\0\1\256\52\0\1\257\54\0\1\260\44\0"+
-    "\1\261\65\0\1\262\40\0\1\263\51\0\1\264\66\0"+
-    "\1\265\36\0\1\266\66\0\1\267\52\0\1\270\36\0"+
-    "\1\271\61\0\1\272\57\0\1\273\46\0\1\274\42\0"+
-    "\1\275\65\0\1\276\53\0\1\277\56\0\1\300\46\0"+
-    "\1\301\37\0\1\302\57\0\1\303\52\0\1\304\52\0"+
-    "\1\305\53\0\1\306\55\0\1\307\54\0\1\310\47\0"+
-    "\1\311\45\0\1\312\62\0\1\313\52\0\1\314\52\0"+
-    "\1\315\50\0\1\316\60\0\1\317\13\0";
+    "\1\17\3\2\1\20\1\21\1\22\1\23\1\2\1\24"+
+    "\1\25\2\2\1\26\2\2\1\27\1\30\1\31\1\32"+
+    "\1\33\1\34\55\0\1\3\54\0\1\5\54\0\1\35"+
+    "\57\0\1\36\72\0\1\37\37\0\1\40\7\0\1\41"+
+    "\36\0\1\42\13\0\1\43\42\0\1\44\7\0\1\45"+
+    "\47\0\1\46\1\0\1\47\10\0\1\50\26\0\1\51"+
+    "\55\0\1\52\1\0\1\53\5\0\1\54\47\0\1\55"+
+    "\60\0\1\56\40\0\1\57\56\0\1\60\7\0\1\61"+
+    "\36\0\1\62\2\0\1\63\15\0\1\64\25\0\1\65"+
+    "\61\0\1\66\6\0\1\67\26\0\1\70\53\0\1\71"+
+    "\76\0\1\72\41\0\1\73\47\0\1\74\65\0\1\75"+
+    "\47\0\1\76\41\0\1\77\67\0\1\100\36\0\1\101"+
+    "\64\0\1\102\37\0\1\103\54\0\1\104\75\0\1\105"+
+    "\43\0\1\106\52\0\1\107\46\0\1\110\36\0\1\111"+
+    "\64\0\1\112\52\0\1\113\56\0\1\114\40\0\1\115"+
+    "\63\0\1\116\53\0\1\117\44\0\1\120\52\0\1\121"+
+    "\37\0\1\122\52\0\1\123\65\0\1\124\52\0\1\125"+
+    "\67\0\1\126\25\0\1\127\55\0\1\130\13\0\1\131"+
+    "\44\0\1\132\45\0\1\133\64\0\1\134\54\0\1\135"+
+    "\45\0\1\136\56\0\1\137\37\0\1\140\52\0\1\141"+
+    "\54\0\1\142\47\0\1\143\64\0\1\144\55\0\1\145"+
+    "\44\0\1\146\53\0\1\147\43\0\1\150\56\0\1\151"+
+    "\53\0\1\152\61\0\1\153\30\0\1\154\52\0\1\155"+
+    "\62\0\1\156\57\0\1\157\41\0\1\160\60\0\1\161"+
+    "\62\0\1\162\32\0\1\163\26\0\1\164\27\0\1\165"+
+    "\62\0\1\166\56\0\1\167\52\0\1\170\40\0\1\171"+
+    "\62\0\1\172\52\0\1\173\63\0\1\174\34\0\1\175"+
+    "\70\0\1\176\23\0\1\177\56\0\1\200\22\0\1\201"+
+    "\23\0\1\202\3\0\1\203\61\0\1\204\57\0\1\205"+
+    "\52\0\1\206\32\0\1\207\70\0\1\210\45\0\1\211"+
+    "\60\0\1\212\51\0\1\213\44\0\1\214\16\0\1\215"+
+    "\35\0\1\216\44\0\1\217\46\0\1\220\52\0\1\221"+
+    "\71\0\1\222\37\0\1\223\57\0\1\224\5\0\1\225"+
+    "\34\0\1\226\101\0\1\227\23\0\1\230\100\0\1\231"+
+    "\52\0\1\232\27\0\1\233\56\0\1\234\55\0\1\235"+
+    "\43\0\1\236\56\0\1\237\61\0\1\240\40\0\1\241"+
+    "\56\0\1\242\61\0\1\243\50\0\1\244\45\0\1\245"+
+    "\53\0\1\246\60\0\1\247\61\0\1\250\33\0\1\251"+
+    "\63\0\1\252\42\0\1\253\60\0\1\254\44\0\1\255"+
+    "\60\0\1\256\52\0\1\257\51\0\1\260\50\0\1\261"+
+    "\56\0\1\262\51\0\1\263\43\0\1\264\52\0\1\265"+
+    "\52\0\1\266\54\0\1\267\44\0\1\270\65\0\1\271"+
+    "\40\0\1\272\51\0\1\273\66\0\1\274\36\0\1\275"+
+    "\66\0\1\276\52\0\1\277\36\0\1\300\61\0\1\301"+
+    "\57\0\1\302\46\0\1\303\42\0\1\304\65\0\1\305"+
+    "\53\0\1\306\56\0\1\307\46\0\1\310\37\0\1\311"+
+    "\57\0\1\312\52\0\1\313\52\0\1\314\53\0\1\315"+
+    "\55\0\1\316\54\0\1\317\47\0\1\320\45\0\1\321"+
+    "\62\0\1\322\52\0\1\323\52\0\1\324\50\0\1\325"+
+    "\60\0\1\326\13\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[7181];
+    int [] result = new int[7439];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -232,16 +235,16 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\2\1\1\11\17\1\7\11\10\0\1\11"+
-    "\5\0\1\1\24\0\1\11\23\0\1\11\4\0\1\11"+
-    "\6\0\1\1\1\0\1\1\3\11\3\0\2\11\1\0"+
-    "\1\11\17\0\1\11\2\0\1\1\7\0\1\11\21\0"+
-    "\1\11\4\0\3\11\13\0\1\11\10\0\1\11\1\0"+
+    "\1\0\1\11\2\1\1\11\20\1\7\11\10\0\1\11"+
+    "\5\0\1\1\25\0\1\11\24\0\1\11\4\0\1\11"+
+    "\7\0\1\1\1\0\1\1\3\11\3\0\2\11\1\0"+
+    "\1\11\20\0\1\11\2\0\1\1\7\0\1\11\22\0"+
+    "\1\11\4\0\4\11\13\0\1\11\10\0\1\11\1\0"+
     "\1\11\2\0\3\11\3\0\1\11\1\0\1\11\4\0"+
     "\3\11\2\0\5\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[207];
+    int [] result = new int[214];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -730,228 +733,234 @@ class Yylex implements java_cup.runtime.Scanner {
           case 1: 
             { System.out.println("Illegal character: <" + yytext().toString() + ">");
             }
-          case 46: break;
+          case 47: break;
           case 2: 
             { 
             }
-          case 47: break;
+          case 48: break;
           case 3: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ATRIBUICAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 48: break;
+          case 49: break;
           case 4: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.P_VIRG, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 49: break;
+          case 50: break;
           case 5: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.VIRG, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 50: break;
+          case 51: break;
           case 6: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ABREPARENTESE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 51: break;
+          case 52: break;
           case 7: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.FECHAPARENTESE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 52: break;
+          case 53: break;
           case 8: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.A_CHAVE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 53: break;
+          case 54: break;
           case 9: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.F_CHAVE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 54: break;
+          case 55: break;
           case 10: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.DO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 55: break;
+          case 56: break;
           case 11: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.IF, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 56: break;
+          case 57: break;
           case 12: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.END, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 57: break;
+          case 58: break;
           case 13: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.BODY, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 58: break;
+          case 59: break;
           case 14: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ELSE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 59: break;
+          case 60: break;
           case 15: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.READ, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 60: break;
+          case 61: break;
           case 16: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.STMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 61: break;
+          case 62: break;
           case 17: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.TERMO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 62: break;
+          case 63: break;
           case 18: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.THEN, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 63: break;
+          case 64: break;
           case 19: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.TIPO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 64: break;
+          case 65: break;
           case 20: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ADDOP, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 65: break;
+          case 66: break;
           case 21: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.MULOP, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 66: break;
+          case 67: break;
           case 22: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.BGN, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 67: break;
+          case 68: break;
           case 23: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.WHILE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 68: break;
+          case 69: break;
           case 24: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.WRITE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 69: break;
+          case 70: break;
           case 25: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.FATOR, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 70: break;
+          case 71: break;
           case 26: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.DCL, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 71: break;
+          case 72: break;
           case 27: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.IFSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 72: break;
+          case 73: break;
           case 28: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.INTEGER, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 73: break;
+          case 74: break;
           case 29: 
+            { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.LITERAL, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+            }
+          case 75: break;
+          case 30: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.PRG, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 74: break;
-          case 30: 
+          case 76: break;
+          case 31: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.CONSTANTE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 75: break;
-          case 31: 
+          case 77: break;
+          case 32: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.VARIABLE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 76: break;
-          case 32: 
+          case 78: break;
+          case 33: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.WRITABLE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 77: break;
-          case 33: 
+          case 79: break;
+          case 34: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.CARACTERE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 78: break;
-          case 34: 
+          case 80: break;
+          case 35: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.CONDICAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 79: break;
-          case 35: 
+          case 81: break;
+          case 36: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.DECLARACAOLISTA, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 80: break;
-          case 36: 
+          case 82: break;
+          case 37: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.LERSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 81: break;
-          case 37: 
+          case 83: break;
+          case 38: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.STMTLIST, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 82: break;
-          case 38: 
+          case 84: break;
+          case 39: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.EXPRESSAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 83: break;
-          case 39: 
+          case 85: break;
+          case 40: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             Token t;
@@ -964,43 +973,43 @@ class Yylex implements java_cup.runtime.Scanner {
                 return (new Token(t.getTag(), id, yyline(), yycolumn(), yychar(), yychar+yylenght()));
             }
             }
-          case 84: break;
-          case 40: 
+          case 86: break;
+          case 41: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.IDENTIFICADORLISTA, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 85: break;
-          case 41: 
+          case 87: break;
+          case 42: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ENQUANTOSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 86: break;
-          case 42: 
+          case 88: break;
+          case 43: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ESCREVERSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 87: break;
-          case 43: 
+          case 89: break;
+          case 44: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ASSIGNSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 88: break;
-          case 44: 
+          case 90: break;
+          case 45: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.EXPRESSAOSIMPLES, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 89: break;
-          case 45: 
+          case 91: break;
+          case 46: 
             { System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ENQUANTOSUFFIX, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
             }
-          case 90: break;
+          case 92: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
