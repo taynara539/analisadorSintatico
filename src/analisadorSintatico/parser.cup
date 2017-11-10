@@ -1,9 +1,13 @@
 package analisadorSintatoco;
 
 terminal PRG, DCL, BGN, END, P_VIRG, VIRG, INTEGER; 
+reservado? ELSE, DO, WHILE, READ, WRITE, THEN, IF;
+        
+    
 terminal String IDENTIFIER;
 
-nonterminal program, body, decl_list, decl, ident_list, tipo; 
+nonterminal program, body, decl_list, decl, ident_list, type, stmt-list, stmt, assign-stmt, condition; 
+nonterminal while-stmt, stmt-suffix, read-stmt, write-stmt, writetable, expression, simple-expr, term, factor, constant;
 
 program ::= program identifier body
 body ::= declare decl-list begin stmt-list end | begin stmt-list end
@@ -25,16 +29,5 @@ expression ::= simple-expr | simple-expr relop simple-expr
 simple-expr ::= term | simple-expr addop term
 term ::= factor | term mulop factor
 factor ::= variable | constant | ( expression )
-relop ::= = | > | >= | < | <= | <>
-addop ::= + | -
-mulop ::= * | /
 constant ::= digit | digit constant
-literal ::= " {caractere}* "
 identifier ::= letter {letter | digit}*
-letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L"
-| "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W"
-| "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h"
-| "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
-| "u" | "v" | "w" | "x" | "y" | "z"
-digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-caractere ::= um dos 256 caracteres do conjunto ASCII, exceto ”

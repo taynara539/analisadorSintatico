@@ -34,24 +34,127 @@ package analisadorSintatico;
 
 %}
 
-LETTER = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L"
-| "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
-DIGIT = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 NONNEWLINE_WHITE_SPACE_CHAR=[\ \t\b]
 NEWLINE=\r|\n|\r\n
 RELOP=[=|>|>=|<|<=|<>]
 ADDOP=[+|-]
 MULOP=[*|/]
-LITERAL=\"{CARACTERE}*\"
-CARACTERE=[^\"]
-IDENTIFIER = {LETTER}({LETTER}|{DIGIT})*
+LITERAL=\"{caractere}*\"
+caractere=[^\"]
+IDENTIFIER={LETTER}({LETTER}|{LETTER})*
+LETTER="A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L"
+| "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W"
+| "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h"
+| "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
+| "u" | "v" | "w" | "x" | "y" | "z"
+DIGIT="0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 %%
   
 
 <YYINITIAL> {
 
-         "program" {
+        "body" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.BODY, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "while-stmt" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.ENQUANTOSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "stmt-suffix" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.ENQUANTOSUFFIX, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "read-stmt" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.LERSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "write-stmt" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.ESCREVERSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "writable" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.WRITABLE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "expression" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.EXPRESSAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "simple-expr" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.EXPRESSAOSIMPLES, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "term" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.TERMO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "factor" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.FATOR, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "constant" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.CONSTANTE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+         "condition" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.CONDICAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "if-stmt" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.IFSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+         "assign-stmt" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.ASSIGNSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+         "stmt-list" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.STMTLIST, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+         "stmt" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.STMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "type" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.TIPO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "decl-list" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.DECLARACAOLISTA, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "decl" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.DECLARACAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "ident-list" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.IDENTIFICADORLISTA, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+        "program" {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.PRG, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
@@ -92,7 +195,7 @@ IDENTIFIER = {LETTER}({LETTER}|{DIGIT})*
             String id = yytext().toString();
             return new Token(sym.READ, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
                 }
-        "wrire" {
+        "write" {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.WRITE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
@@ -123,7 +226,12 @@ IDENTIFIER = {LETTER}({LETTER}|{DIGIT})*
             String id = yytext().toString();
             return new Token(sym.IF, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
                 }
-	{IDENTIFIER} {
+        "caractere" {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.CARACTERE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+                }
+	"identifier" {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             Token t;
