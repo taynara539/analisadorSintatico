@@ -36,11 +36,12 @@ package analisadorSintatico;
 
 NONNEWLINE_WHITE_SPACE_CHAR=[\ \t\b]
 NEWLINE=\r|\n|\r\n
+
 RELOP=[=|>|>=|<|<=|<>]
 ADDOP=[+|-]
 MULOP=[*|/]
-identifier= {letter}({letter}|{digit})*
-letter= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L"
+identifier = {letter}({letter}|{digit})*
+letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L"
 | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W"
 | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h"
 | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
@@ -52,23 +53,29 @@ digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 <YYINITIAL> {
 
-        "=" {
+        ":=" {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ATRIBUICAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
         }
-
-        "variable" {
+        {RELOP} {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
-            return new Token(sym.VARIABLE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+            return new Token(sym.RELOP, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
         }
-        "ADDOP" {
+        
+        {digit} {
+            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+            String id = yytext().toString();
+            return new Token(sym.DIGITO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+        }
+
+        {ADDOP} {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.ADDOP, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
         }
-        "MULOP" {
+        {MULOP} {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
             return new Token(sym.MULOP, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
@@ -78,103 +85,7 @@ digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
             String id = yytext().toString();
             return new Token(sym.LITERAL, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
         }       
-        "body" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.BODY, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "whil_-stmt" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.ENQUANTOSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "stmt_suffix" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.ENQUANTOSUFFIX, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "read_stmt" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.LERSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "write_stmt" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.ESCREVERSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "writable" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.WRITABLE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "expression" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.EXPRESSAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "simple_expr" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.EXPRESSAOSIMPLES, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "term" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.TERMO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "factor" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.FATOR, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "constant" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.CONSTANTE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        
-         "condition" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.CONDICAO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "if_stmt" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.IFSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-         "assign_stmt" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.ASSIGNSTMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-         "stmt_list" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.STMTLIST, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-         "stmt" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.STMT, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "type" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.TIPO, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        "decl_list" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.DECLARACAOLISTA, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
-        
-        "ident_list" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.IDENTIFICADORLISTA, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-        }
+       
         "program" {
             System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
             String id = yytext().toString();
@@ -269,30 +180,29 @@ digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
             String id = yytext().toString();
             return new Token(sym.IF, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
                 }
-        "caractere" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            return new Token(sym.CARACTERE, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+       
+        {identifier} {
+                    System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
+                    String id = yytext().toString();
+                    Token t;
+                    if (!TS.getTabelaSimbolos().containsKey(id)) {  			
+                        t = new Token(sym.identifier, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
+                        TS.getTabelaSimbolos().put(id, t);
+                        return t;
+                    }else{
+                        t = TS.getTabelaSimbolos().get(id);
+                        return (new Token(t.getTag(), id, yyline(), yycolumn(), yychar(), yychar+yylenght()));
+                    }
                 }
-	"identifier" {
-            System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
-            String id = yytext().toString();
-            Token t;
-            if (!TS.getTabelaSimbolos().containsKey(id)) {  			
-		t = new Token(sym.identifier, id, yyline(), yycolumn(), yychar(), yychar+yylenght());
-		TS.getTabelaSimbolos().put(id, t);
-                return t;
-            }else{
-                t = TS.getTabelaSimbolos().get(id);
-                return (new Token(t.getTag(), id, yyline(), yycolumn(), yychar(), yychar+yylenght()));
-            }
-        }
+	
 }
 <<EOF>> {
 	System.out.println("line: "+(yyline+1)+" "+"col: "+(yycolumn+1)+" "+"match: --"+yytext()+"--");
 	return (new Token(sym.EOF,yytext(),yyline(),yycolumn(),yychar(),yychar+1)); }
 
 {NONNEWLINE_WHITE_SPACE_CHAR}+ { }
+
+
 
 {NEWLINE} { }
 

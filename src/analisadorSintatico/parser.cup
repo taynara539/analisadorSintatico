@@ -1,23 +1,24 @@
 package analisadorSintatico;
 
-terminal PRG, DCL, BGN, END, P_VIRG, VIRG, INTEGER, ELSE, DO, WHILE;
+terminal PRG, DCL, BGN, END, P_VIRG, VIRG, INTEGER, ELSE, DO, WHILE, ATRIBUICAO,LITERAL,DIGITO;
 terminal READ, THEN, IF, WRITE, RELOP, ADDOP, ABREPARENTESE, FECHAPARENTESE, MULOP, A_CHAVE, F_CHAVE; 
     
 terminal String identifier;
 
-nonterminal program, body, decl_list, decl, ident_list, type, stmt_list, stmt, assign_stmt, variable;
-nonterminal ATRIBUICAO, condition, if_stmt, literal, while_stmt, stmt_suffix, read_stmt, write_stmt, writable;
-nonterminal expression, simple_expr, term, factor, DIGITO, letter, constant;
+nonterminal Program, body, decl_list, decl, ident_list, type, stmt_list, stmt, assign_stmt, variable;
+nonterminal condition, if_stmt, literal, while_stmt, stmt_suffix, read_stmt, write_stmt, writable;
+nonterminal expression, simple_expr, term, factor , constant;
 
-program ::= PRG identifier body;
+Program ::= PRG identifier body;
 body ::= DCL decl_list BGN stmt_list END | BGN stmt_list END;
-decl_list ::= DCL | DCL P_VIRG decl_list;
+decl_list ::= decl P_VIRG | decl P_VIRG decl_list;
 decl ::= type ident_list;
+
 ident_list ::= identifier | identifier VIRG ident_list;
 type ::= INTEGER;
 stmt_list ::= stmt | stmt P_VIRG stmt_list;
 stmt ::= assign_stmt | if_stmt | while_stmt | read_stmt | write_stmt;
-assign_stmt ::= variable ATRIBUICAO  simple_expr;
+assign_stmt ::= identifier ATRIBUICAO  simple_expr;
 if_stmt ::= IF condition THEN stmt_list END| IF condition THEN stmt_list ELSE stmt_list END;
 condition ::= expression;
 while_stmt ::= DO stmt_list stmt_suffix;
@@ -28,5 +29,5 @@ writable ::= simple_expr | literal;
 expression ::= simple_expr | simple_expr RELOP simple_expr;
 simple_expr ::= term | simple_expr ADDOP term;
 term ::= factor | term MULOP factor;
-factor ::= variable | constant | ABREPARENTESE expression FECHAPARENTESE;
+factor ::= identifier | constant | ABREPARENTESE expression FECHAPARENTESE;
 constant ::= DIGITO | DIGITO constant;
